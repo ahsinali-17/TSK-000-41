@@ -15,9 +15,9 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex justify-around items-center min-h-[75%] min-w-[35vw]">
         <ul className='flex justify-around items-center min-h-[75%] min-w-[35vw]'>
-          <li className='font-bold hover:text-gray-400 cursor-pointer'>Internship</li>
-          <li className='font-bold hover:text-gray-400 cursor-pointer'>Company Collaborations</li>
-          <li className='font-bold hover:text-gray-400 cursor-pointer'>Contact Us</li>
+          <Link to="/internships"><li className='font-bold hover:text-gray-400 cursor-pointer'>Internship</li></Link>
+          <Link to="/reviews"><li className='font-bold hover:text-gray-400 cursor-pointer'>Company Reviews</li></Link>
+          <Link to="/contact"><li className='font-bold hover:text-gray-400 cursor-pointer'>Contact Us</li></Link>
         </ul>
         <div className="buttons flex gap-5">
           <button className='btn bg-green-400 hover:opacity-80 font-bold p-3 text-white cursor-pointer min-w-40'>Job Portal</button>
@@ -32,9 +32,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center shadow-md md:hidden">
           <ul className='flex flex-col items-center w-full'>
-            <li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Internship</li>
-            <li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Company Collaborations</li>
-            <li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Contact Us</li>
+            <Link to="/internships"><li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Internship</li></Link>
+                <Link to="/reviews"><li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Company Reviews</li></Link>
+                <Link to="/contact"><li className='font-bold hover:text-gray-400 cursor-pointer py-2' onClick={toggleMenu}>Contact Us</li></Link>
           </ul>
           <div className="buttons flex flex-col gap-3 py-3">
             <button className='btn bg-green-400 hover:opacity-80 font-bold p-3 text-white cursor-pointer min-w-40' onClick={toggleMenu}>Job Portal</button>

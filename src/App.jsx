@@ -31,6 +31,18 @@ function App() {
        path:'/login',
        element:<Login/>
     },
+    {
+      path:'/internships',
+      element:<><Navbar/> <Third/></>
+   },
+   {
+    path:'/reviews',
+    element:<div className='overflow-hidden'><Navbar/> <Fifth/></div>
+ },
+ {
+  path:'/contact',
+  element:<><Navbar/> <Footer/></>
+}
 ])
   return (
     <>
